@@ -6,7 +6,6 @@ from app.models import *
 
 
 class User(Base):
-
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String)
@@ -14,7 +13,7 @@ class User(Base):
     lastname = Column(String)
     age = Column(Integer)
     slug = Column(String, unique=True, index=True)
-    task = relationship(argument='Task', back_populates='users')
+    task = relationship(argument='Task', back_populates='user')
 
 
 print(CreateTable(User.__table__))
