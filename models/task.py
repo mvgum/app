@@ -17,4 +17,4 @@ class Task(Base):
     user = relationship(argument='User', back_populates='task')
 
 
-print(CreateTable(Task.__table__))
+CreateTable(Task.__table__)
